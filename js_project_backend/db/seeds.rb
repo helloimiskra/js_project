@@ -5,3 +5,35 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+require 'securerandom'
+
+User.delete_all
+Pet.delete_all
+Task.delete_all
+
+users_name = [
+    'Amelia',
+    'Bobby',
+    'Carol',
+    'Dmitri'
+]
+
+user_collection = []
+
+users_name.each do |name|
+    user_collection << User.create(name: name)
+end
+
+user_collection.each do |user|
+    pet_size = (SecureRandom.random_number(6) + 1).floor
+    (1..pet_size).each do |poke|
+        name = Faker::Creature::Dog.name
+        kind = Faker::Creature::Animal.name
+        Pet.create(name: name, kind: kind, user_id: user.id)
+    end
+end
+
+
+
