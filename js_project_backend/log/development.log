@@ -214,3 +214,44 @@ Processing by UsersController#index as */*
 Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 5233)
 
 
+Started GET "/test" for ::1 at 2020-05-01 19:20:45 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#test as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferencesToTasks (20200502035428)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "tasks" ADD "user_id" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "comment" varchar DEFAULT NULL, "time" datetime DEFAULT NULL, "complete" boolean DEFAULT NULL, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_pet_id" ON "atasks" ("pet_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","title","comment","time","complete","pet_id","created_at","updated_at","user_id")
+                     SELECT "id","title","comment","time","complete","pet_id","created_at","updated_at","user_id" FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "comment" varchar DEFAULT NULL, "time" datetime DEFAULT NULL, "complete" boolean DEFAULT NULL, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_a803d427d5"
+FOREIGN KEY ("pet_id")
+  REFERENCES "pets" ("id")
+, CONSTRAINT "fk_rails_4d2a9e4d7e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_pet_id" ON "tasks" ("pet_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","title","comment","time","complete","pet_id","created_at","updated_at","user_id")
+                     SELECT "id","title","comment","time","complete","pet_id","created_at","updated_at","user_id" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200502035428"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
