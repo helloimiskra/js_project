@@ -12,6 +12,7 @@ class User {
     static createUser(){
         const userForm = document.getElementById('new-user-form')
         userForm.addEventListener('submit', function(e){
+            e.preventDefault()
             fetch('http://localhost:3000/users', {
                 method: "POST",
                 headers: {
@@ -38,6 +39,8 @@ class User {
         displayUser() {
             const body = document.getElementById('index-container')
             body.innerHTML = `<h1>Welcome back, ${this.name}.</h1>`
+
+            Pet.createPet(this.id)
         }
 
     }
