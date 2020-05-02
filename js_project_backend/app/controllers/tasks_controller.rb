@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
-    
+
     def index
-        users = Task.all 
+        tasks = Task.all 
         render json: tasks 
     end
 
@@ -32,5 +32,11 @@ class TasksController < ApplicationController
         task = Task.find(params[:id])
         task.update(complete: params[:complete])
         redirect_to task_path(task)
+    end
+
+    private
+
+    def task_params
+        params.require(:task).permit(:title, :comment, :time, :complete)
     end
 end
