@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_035428) do
+ActiveRecord::Schema.define(version: 2020_05_01_221957) do
 
   create_table "pets", force: :cascade do |t|
     t.string "kind"
@@ -29,9 +29,7 @@ ActiveRecord::Schema.define(version: 2020_05_02_035428) do
     t.integer "pet_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
     t.index ["pet_id"], name: "index_tasks_on_pet_id"
-    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,5 +40,4 @@ ActiveRecord::Schema.define(version: 2020_05_02_035428) do
 
   add_foreign_key "pets", "users"
   add_foreign_key "tasks", "pets"
-  add_foreign_key "tasks", "users"
 end

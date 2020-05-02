@@ -255,3 +255,399 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferencesToTasks (20200502035428)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "comment" varchar DEFAULT NULL, "time" datetime DEFAULT NULL, "complete" boolean DEFAULT NULL, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_pet_id" ON "atasks" ("pet_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","title","comment","time","complete","pet_id","created_at","updated_at","user_id")
+                     SELECT "id","title","comment","time","complete","pet_id","created_at","updated_at","user_id" FROM "tasks"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "comment" varchar DEFAULT NULL, "time" datetime DEFAULT NULL, "complete" boolean DEFAULT NULL, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_a803d427d5"
+FOREIGN KEY ("pet_id")
+  REFERENCES "pets" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_pet_id" ON "tasks" ("pet_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","title","comment","time","complete","pet_id","created_at","updated_at","user_id")
+                     SELECT "id","title","comment","time","complete","pet_id","created_at","updated_at","user_id" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "comment" varchar DEFAULT NULL, "time" datetime DEFAULT NULL, "complete" boolean DEFAULT NULL, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_user_id" ON "atasks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_pet_id" ON "atasks" ("pet_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","title","comment","time","complete","pet_id","created_at","updated_at","user_id")
+                     SELECT "id","title","comment","time","complete","pet_id","created_at","updated_at","user_id" FROM "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "comment" varchar DEFAULT NULL, "time" datetime DEFAULT NULL, "complete" boolean DEFAULT NULL, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a803d427d5"
+FOREIGN KEY ("pet_id")
+  REFERENCES "pets" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_pet_id" ON "tasks" ("pet_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","title","comment","time","complete","pet_id","created_at","updated_at")
+                     SELECT "id","title","comment","time","complete","pet_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200502035428"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20200501221957)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200501221957"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePets (20200501220842)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "pets"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200501220842"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200501220743)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200501220743"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200501220743)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501220743"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePets (20200501220842)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "pets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "name" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0fa4bae6b1"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_pets_on_user_id" ON "pets" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501220842"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20200501221957)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comment" varchar, "time" datetime, "complete" boolean, "pet_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a803d427d5"
+FOREIGN KEY ("pet_id")
+  REFERENCES "pets" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_pet_id" ON "tasks" ("pet_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501221957"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mPet Destroy (0.1ms)[0m  [1m[31mDELETE FROM "pets"[0m
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Amelia"], ["created_at", "2020-05-02 04:51:01.195180"], ["updated_at", "2020-05-02 04:51:01.195180"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bobby"], ["created_at", "2020-05-02 04:51:01.199096"], ["updated_at", "2020-05-02 04:51:01.199096"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Carol"], ["created_at", "2020-05-02 04:51:01.203226"], ["updated_at", "2020-05-02 04:51:01.203226"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dmitri"], ["created_at", "2020-05-02 04:51:01.206635"], ["updated_at", "2020-05-02 04:51:01.206635"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "elk"], ["name", "Missy"], ["user_id", 1], ["created_at", "2020-05-02 04:51:01.346284"], ["updated_at", "2020-05-02 04:51:01.346284"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "crocodile"], ["name", "Casey"], ["user_id", 2], ["created_at", "2020-05-02 04:51:01.351184"], ["updated_at", "2020-05-02 04:51:01.351184"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "deer"], ["name", "Snoopy"], ["user_id", 2], ["created_at", "2020-05-02 04:51:01.358005"], ["updated_at", "2020-05-02 04:51:01.358005"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "armadillo"], ["name", "Lucky"], ["user_id", 2], ["created_at", "2020-05-02 04:51:01.364073"], ["updated_at", "2020-05-02 04:51:01.364073"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPet Create (0.7ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "horse"], ["name", "Rosie"], ["user_id", 2], ["created_at", "2020-05-02 04:51:01.387312"], ["updated_at", "2020-05-02 04:51:01.387312"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "scorpion"], ["name", "Belle"], ["user_id", 2], ["created_at", "2020-05-02 04:51:01.394300"], ["updated_at", "2020-05-02 04:51:01.394300"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPet Create (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "reindeer"], ["name", "Charlie"], ["user_id", 3], ["created_at", "2020-05-02 04:51:01.399793"], ["updated_at", "2020-05-02 04:51:01.399793"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "gnu"], ["name", "Charlie"], ["user_id", 3], ["created_at", "2020-05-02 04:51:01.410032"], ["updated_at", "2020-05-02 04:51:01.410032"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "chinchilla"], ["name", "Milo"], ["user_id", 3], ["created_at", "2020-05-02 04:51:01.427734"], ["updated_at", "2020-05-02 04:51:01.427734"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "frog"], ["name", "Tank"], ["user_id", 3], ["created_at", "2020-05-02 04:51:01.436791"], ["updated_at", "2020-05-02 04:51:01.436791"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPet Create (0.8ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "hyena"], ["name", "Shelby"], ["user_id", 4], ["created_at", "2020-05-02 04:51:01.462207"], ["updated_at", "2020-05-02 04:51:01.462207"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "hound"], ["name", "Milo"], ["user_id", 4], ["created_at", "2020-05-02 04:51:01.496756"], ["updated_at", "2020-05-02 04:51:01.496756"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "cheetah"], ["name", "Lady"], ["user_id", 4], ["created_at", "2020-05-02 04:51:01.502077"], ["updated_at", "2020-05-02 04:51:01.502077"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "ant"], ["name", "Misty"], ["user_id", 4], ["created_at", "2020-05-02 04:51:01.506573"], ["updated_at", "2020-05-02 04:51:01.506573"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "indicate"], ["comment", "Brave heart, Tegan."], ["time", "2020-04-21 19:19:50"], ["complete", 0], ["pet_id", 1], ["created_at", "2020-05-02 04:51:01.518894"], ["updated_at", "2020-05-02 04:51:01.518894"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "optimize"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-18 20:18:13"], ["complete", 0], ["pet_id", 1], ["created_at", "2020-05-02 04:51:01.523732"], ["updated_at", "2020-05-02 04:51:01.523732"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "lose"], ["comment", "I’m sorry. I’m so sorry."], ["time", "2020-04-29 17:12:29"], ["complete", 0], ["pet_id", 1], ["created_at", "2020-05-02 04:51:01.528930"], ["updated_at", "2020-05-02 04:51:01.528930"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "chase"], ["comment", "Mm? What’s that, my boy?"], ["time", "2020-04-19 17:40:15"], ["complete", 0], ["pet_id", 1], ["created_at", "2020-05-02 04:51:01.533838"], ["updated_at", "2020-05-02 04:51:01.533838"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "prefer"], ["comment", "Would you care for a jelly baby?"], ["time", "2020-04-26 23:54:42"], ["complete", 0], ["pet_id", 2], ["created_at", "2020-05-02 04:51:01.538555"], ["updated_at", "2020-05-02 04:51:01.538555"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "drink"], ["comment", "Somewhere there’s danger, somewhere there’s injustice, somewhere else, the tea’s getting cold."], ["time", "2020-04-29 14:03:18"], ["complete", 0], ["pet_id", 2], ["created_at", "2020-05-02 04:51:01.543285"], ["updated_at", "2020-05-02 04:51:01.543285"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "think"], ["comment", "Fantastic!"], ["time", "2020-05-01 12:08:21"], ["complete", 0], ["pet_id", 3], ["created_at", "2020-05-02 04:51:01.548076"], ["updated_at", "2020-05-02 04:51:01.548076"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "notify"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-21 20:19:10"], ["complete", 0], ["pet_id", 3], ["created_at", "2020-05-02 04:51:01.553899"], ["updated_at", "2020-05-02 04:51:01.553899"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "believe"], ["comment", "Somewhere there’s danger, somewhere there’s injustice, somewhere else, the tea’s getting cold."], ["time", "2020-04-23 20:03:08"], ["complete", 0], ["pet_id", 3], ["created_at", "2020-05-02 04:51:01.559218"], ["updated_at", "2020-05-02 04:51:01.559218"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "congratulate"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-25 11:59:56"], ["complete", 0], ["pet_id", 3], ["created_at", "2020-05-02 04:51:01.564846"], ["updated_at", "2020-05-02 04:51:01.564846"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "nap"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-26 09:00:08"], ["complete", 0], ["pet_id", 3], ["created_at", "2020-05-02 04:51:01.570046"], ["updated_at", "2020-05-02 04:51:01.570046"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "scatter"], ["comment", "Bow ties are cool."], ["time", "2020-04-27 15:18:51"], ["complete", 0], ["pet_id", 3], ["created_at", "2020-05-02 04:51:01.574906"], ["updated_at", "2020-05-02 04:51:01.574906"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "diminish"], ["comment", "Brave heart, Tegan."], ["time", "2020-04-26 04:08:18"], ["complete", 0], ["pet_id", 4], ["created_at", "2020-05-02 04:51:01.579859"], ["updated_at", "2020-05-02 04:51:01.579859"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "swell"], ["comment", "I’m sorry. I’m so sorry."], ["time", "2020-04-19 00:15:33"], ["complete", 0], ["pet_id", 4], ["created_at", "2020-05-02 04:51:01.585174"], ["updated_at", "2020-05-02 04:51:01.585174"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "chew"], ["comment", "Bow ties are cool."], ["time", "2020-05-01 19:14:46"], ["complete", 0], ["pet_id", 4], ["created_at", "2020-05-02 04:51:01.591274"], ["updated_at", "2020-05-02 04:51:01.591274"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "train"], ["comment", "Somewhere there’s danger, somewhere there’s injustice, somewhere else, the tea’s getting cold."], ["time", "2020-04-27 15:47:04"], ["complete", 0], ["pet_id", 5], ["created_at", "2020-05-02 04:51:01.596667"], ["updated_at", "2020-05-02 04:51:01.596667"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "wax"], ["comment", "Mmm I wonder ... Aha!"], ["time", "2020-04-27 12:34:37"], ["complete", 0], ["pet_id", 6], ["created_at", "2020-05-02 04:51:01.601946"], ["updated_at", "2020-05-02 04:51:01.601946"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "leap"], ["comment", "Mm? What’s that, my boy?"], ["time", "2020-04-23 15:52:06"], ["complete", 0], ["pet_id", 6], ["created_at", "2020-05-02 04:51:01.606667"], ["updated_at", "2020-05-02 04:51:01.606667"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "assert"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-21 01:12:19"], ["complete", 0], ["pet_id", 6], ["created_at", "2020-05-02 04:51:01.611432"], ["updated_at", "2020-05-02 04:51:01.611432"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "correspond"], ["comment", "Bow ties are cool."], ["time", "2020-04-22 17:15:51"], ["complete", 0], ["pet_id", 7], ["created_at", "2020-05-02 04:51:01.616113"], ["updated_at", "2020-05-02 04:51:01.616113"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "wax"], ["comment", "Fantastic!"], ["time", "2020-04-25 00:44:20"], ["complete", 0], ["pet_id", 7], ["created_at", "2020-05-02 04:51:01.620917"], ["updated_at", "2020-05-02 04:51:01.620917"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "apply"], ["comment", "Allons-y!"], ["time", "2020-04-19 13:57:32"], ["complete", 0], ["pet_id", 7], ["created_at", "2020-05-02 04:51:01.625982"], ["updated_at", "2020-05-02 04:51:01.625982"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "utter"], ["comment", "Mmm I wonder ... Aha!"], ["time", "2020-04-26 15:28:01"], ["complete", 0], ["pet_id", 7], ["created_at", "2020-05-02 04:51:01.630647"], ["updated_at", "2020-05-02 04:51:01.630647"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sway"], ["comment", "Fantastic!"], ["time", "2020-04-19 18:56:54"], ["complete", 0], ["pet_id", 7], ["created_at", "2020-05-02 04:51:01.635557"], ["updated_at", "2020-05-02 04:51:01.635557"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "neglect"], ["comment", "Would you care for a jelly baby?"], ["time", "2020-04-22 19:35:14"], ["complete", 0], ["pet_id", 8], ["created_at", "2020-05-02 04:51:01.640168"], ["updated_at", "2020-05-02 04:51:01.640168"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "tree"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-18 05:39:56"], ["complete", 0], ["pet_id", 9], ["created_at", "2020-05-02 04:51:01.644877"], ["updated_at", "2020-05-02 04:51:01.644877"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "imagine"], ["comment", "Somewhere there’s danger, somewhere there’s injustice, somewhere else, the tea’s getting cold."], ["time", "2020-04-18 21:17:40"], ["complete", 0], ["pet_id", 9], ["created_at", "2020-05-02 04:51:01.649777"], ["updated_at", "2020-05-02 04:51:01.649777"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "perish"], ["comment", "Fantastic!"], ["time", "2020-04-22 06:45:12"], ["complete", 0], ["pet_id", 10], ["created_at", "2020-05-02 04:51:01.655179"], ["updated_at", "2020-05-02 04:51:01.655179"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "toss"], ["comment", "Reverse the polarity of the neutron flow."], ["time", "2020-04-22 04:48:30"], ["complete", 0], ["pet_id", 11], ["created_at", "2020-05-02 04:51:01.660173"], ["updated_at", "2020-05-02 04:51:01.660173"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "fizz"], ["comment", "Mmm I wonder ... Aha!"], ["time", "2020-04-23 20:31:04"], ["complete", 0], ["pet_id", 11], ["created_at", "2020-05-02 04:51:01.665409"], ["updated_at", "2020-05-02 04:51:01.665409"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sate"], ["comment", "Allons-y!"], ["time", "2020-04-27 04:14:32"], ["complete", 0], ["pet_id", 11], ["created_at", "2020-05-02 04:51:01.670743"], ["updated_at", "2020-05-02 04:51:01.670743"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "light"], ["comment", "Mm? What’s that, my boy?"], ["time", "2020-04-20 18:41:23"], ["complete", 0], ["pet_id", 11], ["created_at", "2020-05-02 04:51:01.675914"], ["updated_at", "2020-05-02 04:51:01.675914"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "differ"], ["comment", "Brave heart, Tegan."], ["time", "2020-04-26 06:08:01"], ["complete", 0], ["pet_id", 11], ["created_at", "2020-05-02 04:51:01.681020"], ["updated_at", "2020-05-02 04:51:01.681020"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sip"], ["comment", "I’m sorry. I’m so sorry."], ["time", "2020-04-25 15:26:52"], ["complete", 0], ["pet_id", 11], ["created_at", "2020-05-02 04:51:01.686549"], ["updated_at", "2020-05-02 04:51:01.686549"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "owe"], ["comment", "Somewhere there’s danger, somewhere there’s injustice, somewhere else, the tea’s getting cold."], ["time", "2020-04-27 08:52:54"], ["complete", 0], ["pet_id", 12], ["created_at", "2020-05-02 04:51:01.691449"], ["updated_at", "2020-05-02 04:51:01.691449"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "bless"], ["comment", "Bow ties are cool."], ["time", "2020-04-18 23:14:02"], ["complete", 0], ["pet_id", 13], ["created_at", "2020-05-02 04:51:01.696932"], ["updated_at", "2020-05-02 04:51:01.696932"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sip"], ["comment", "Allons-y!"], ["time", "2020-04-27 21:22:33"], ["complete", 0], ["pet_id", 13], ["created_at", "2020-05-02 04:51:01.703263"], ["updated_at", "2020-05-02 04:51:01.703263"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "opine"], ["comment", "Bow ties are cool."], ["time", "2020-04-28 00:11:50"], ["complete", 0], ["pet_id", 14], ["created_at", "2020-05-02 04:51:01.710236"], ["updated_at", "2020-05-02 04:51:01.710236"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]

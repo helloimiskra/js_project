@@ -35,5 +35,15 @@ user_collection.each do |user|
     end
 end
 
+Pet.all.each do |pet|
+    task_size = (SecureRandom.random_number(6)+ 1).floor
+    (1..task_size).each do |poke|
+        title = Faker::Verb.base
+        comment = Faker::TvShows::DrWho.catch_phrase
+        time = Faker::Time.backward(days: 14)
+        complete = false
+        Task.create(title: title, comment: comment, time: time, complete: complete, pet_id: pet.id)
+    end
+end
 
 

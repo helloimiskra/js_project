@@ -1,4 +1,4 @@
 class Pet < ApplicationRecord
   belongs_to :user
-  has_many :tasks, through: :user
+  has_many :tasks
 end
