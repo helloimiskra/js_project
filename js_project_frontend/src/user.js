@@ -39,8 +39,8 @@ class User {
         displayUser() {
             const body = document.getElementById('index-container')
             body.innerHTML = `<h1>Welcome back, ${this.name}.</h1>`
-
-            Pet.createPet(this.id)
+            Pet.getPets(this.id)
+        
         }
 
     }
