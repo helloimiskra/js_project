@@ -1,5 +1,5 @@
 class PetSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :kind
+  attributes :id, :name, :kind
   belongs_to :user
 end
