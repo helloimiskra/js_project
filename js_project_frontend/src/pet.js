@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', function(){
-    Pet.newPetForm()
-    Pet.getPets()
-})
 
 class Pet {
     constructor(pet){
@@ -18,11 +14,16 @@ class Pet {
         .then(json => Pet.renderPets(json, user_id))
     }
 
-    static renderPets(json){
-        const div = document.getElementById('pets-container')
+    static renderPets(json, u_id){
+        
         let pets = json
-        pets.forEach(pet => {
-            
+        let userPets = pets.filter(function(pet){
+            return pet.user_id === u_id})
+        
+        console.log(pets)
+        console.log(userPets)
+        userPets.map(pet => {
+            const div = document.getElementById('pets-container')
             const p = document.createElement('div')
             p.className = "card"
             const name = document.createElement('h3')
@@ -37,12 +38,8 @@ class Pet {
             button.setAttribute("id", pet.id)
             p.appendChild(button)
             div.appendChild(p)
-            
-        })
-        .catch(function(error){
-            document.body.innerHTML = `<h1>${error.message} </h1>`;
-            console.log(error.message)
-        })
+            }
+        )
     }
     static newPetForm(user_id){
         const petsContainer = document.getElementById('pets-container')
@@ -54,7 +51,7 @@ class Pet {
         <input type = "text" id = "kind">
         <input type = "submit"/> </form>`
 
-        petsContainer.insertAdjacentHTML('afterend', newPetForm)
+        petsContainer.insertAdjacentHTML('beforeend', newPetForm)
         Pet.createPet(user_id)
     }
 
@@ -72,6 +69,7 @@ class Pet {
                     {
                         pet: {
                             name: e.target.children[1].value
+                            
                         }
                     })
                 })
@@ -80,10 +78,35 @@ class Pet {
                 })
                 .then (pet => {
                     const newPet = new Pet(pet)
+                    newPet.user_id = user_id
+                    newPet.displayPet()
                
                 })
             })
         }
+        displayPet(){
+            const petsContainer = document.getElementById('pets-container')
 
-    ''
+            petsContainer.innerHTML = `<h2>Name: ${this.name} <br> Kind: ${this.kind} <br> </h2>`
+        }
+
+        displayPet(){
+
+            const div = document.getElementById('pets-container')
+            const p = document.createElement('div')
+            p.className = "card"
+            const name = document.createElement('h3')
+            name.innerText = `Name: ${this.name}`
+            p.appendChild(name)
+            const kind = document.createElement('h3')
+            kind.innerText = `Kind: ${this.kind}`
+            p.appendChild(kind)
+            const button = document.createElement('button')
+            button.innerText = 'My Tasks'
+            button.classList = 'task-btn'
+            button.setAttribute("id", this.id)
+            p.appendChild(button)
+            div.appendChild(p)
+        }
+
 }

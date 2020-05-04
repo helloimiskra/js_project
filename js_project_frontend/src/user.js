@@ -39,8 +39,19 @@ class User {
         displayUser() {
             const body = document.getElementById('index-container')
             body.innerHTML = `<h1>Welcome back, ${this.name}.</h1>`
-            Pet.getPets(this.id)
-        
+            
+
+            const petContainer = document.createElement('div')
+            petContainer.setAttribute('id', 'pets-container')
+            body.append(petContainer)
+
+            if (this.pets){
+                this.pets.forEach(function(pet){
+                    let newPet = new Pet(pet)
+                    newPet.displayPet()
+                })
+            }
+            Pet.newPetForm(this.id)
         }
 
     }
