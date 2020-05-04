@@ -2238,3 +2238,120 @@ Processing by UsersController#show as JSON
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 671)
 
 
+Started POST "/users" for ::1 at 2020-05-03 20:44:29 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:44:29 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 671)
+
+
+Started POST "/users" for ::1 at 2020-05-03 20:45:32 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:45:32 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 671)
+
+
+Started POST "/users" for ::1 at 2020-05-03 20:46:00 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:46:00 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 671)
+
+
+Started POST "/users" for ::1 at 2020-05-03 20:46:55 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:46:55 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 671)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started POST "/users" for ::1 at 2020-05-03 20:48:42 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1052)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:48:42 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 671)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:49:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 667)
+
+
+Started GET "/users/1" for ::1 at 2020-05-03 20:52:39 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 26ms (Views: 9.4ms | ActiveRecord: 2.9ms | Allocations: 11016)
+
+

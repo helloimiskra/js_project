@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     def show
         user = User.find_by(id: params[:id])
         if user
-            render json: user
+            render json: { id: user.id, name: user.name, pets: user.pets}
         else
             render json: {message: 'User not found'}
         end
