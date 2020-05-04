@@ -72,8 +72,8 @@ class Pet {
                     {
                         pet: {
                             name: e.target.children[1].value,
-                            kind: e.target.children[2].value
-                            
+                            kind: e.target.children[4].value,
+                            user_id: user_id
                         }
                     })
                 })
@@ -82,9 +82,7 @@ class Pet {
                 })
                 .then (pet => {
                     const newPet = new Pet(pet)
-                    newPet.user_id = user_id
                     newPet.displayPet()
-               
                 })
             })
         }

@@ -44,14 +44,14 @@ class User {
             const petContainer = document.createElement('div')
             petContainer.setAttribute('id', 'pets-container')
             body.append(petContainer)
-
+            Pet.newPetForm(this.id)
             if (this.pets){
                 this.pets.forEach(function(pet){
                     let newPet = new Pet(pet)
                     newPet.displayPet()
                 })
             }
-            Pet.newPetForm(this.id)
+            
         }
 
     }
