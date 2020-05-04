@@ -44,12 +44,15 @@ class Pet {
     static newPetForm(user_id){
         const petsContainer = document.getElementById('pets-container')
 
-        const newPetForm = `<form id = "new-pet-form">
+        const newPetForm = `
+        
+        <form id = "new-pet-form">
         <label>Pet Name</label>
         <input type = "text" id = "name"><br>
-        <label>Pet Type (dog, cat, fish, etc)<label>
+        <label>Pet Type (dog, cat, fish, etc)</label>
         <input type = "text" id = "kind">
-        <input type = "submit"/> </form>`
+        <input type = "submit"/> </form>
+        `
 
         petsContainer.insertAdjacentHTML('beforeend', newPetForm)
         Pet.createPet(user_id)
@@ -68,7 +71,8 @@ class Pet {
                 body: JSON.stringify(
                     {
                         pet: {
-                            name: e.target.children[1].value
+                            name: e.target.children[1].value,
+                            kind: e.target.children[2].value
                             
                         }
                     })
@@ -84,11 +88,7 @@ class Pet {
                 })
             })
         }
-        displayPet(){
-            const petsContainer = document.getElementById('pets-container')
-
-            petsContainer.innerHTML = `<h2>Name: ${this.name} <br> Kind: ${this.kind} <br> </h2>`
-        }
+        
 
         displayPet(){
 
