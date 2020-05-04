@@ -8,7 +8,7 @@ class PetsController < ApplicationController
     def show
         pet = Pet.find_by(id: params[:id])
         if pet
-            render json: pet
+            render json: { id: pet.id, name: pet.name, kind: pet.kind, tasks: pet.tasks}
         else
             render json: {message: 'Pet not found'}
         end

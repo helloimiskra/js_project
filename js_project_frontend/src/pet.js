@@ -1,4 +1,3 @@
-
 class Pet {
     constructor(pet){
         this.id = pet.id
@@ -19,9 +18,6 @@ class Pet {
         let pets = json
         let userPets = pets.filter(function(pet){
             return pet.user_id === u_id})
-        
-        console.log(pets)
-        console.log(userPets)
         userPets.map(pet => {
             const div = document.getElementById('pets-container')
             const p = document.createElement('div')
@@ -88,23 +84,22 @@ class Pet {
         }
         
 
-        displayPet(){
-
-            const div = document.getElementById('pets-container')
-            const p = document.createElement('div')
-            p.className = "card"
-            const name = document.createElement('h3')
-            name.innerText = `Name: ${this.name}`
-            p.appendChild(name)
-            const kind = document.createElement('h3')
-            kind.innerText = `Kind: ${this.kind}`
-            p.appendChild(kind)
-            const button = document.createElement('button')
-            button.innerText = 'My Tasks'
-            button.classList = 'task-btn'
-            button.setAttribute("id", this.id)
-            p.appendChild(button)
-            div.appendChild(p)
-        }
+    displayPet(){
+        const div = document.getElementById('pets-container')
+        const p = document.createElement('div')
+        p.className = "card"
+        const name = document.createElement('h3')
+        name.innerText = `Name: ${this.name}`
+        p.appendChild(name)
+        const kind = document.createElement('h3')
+        kind.innerText = `Kind: ${this.kind}`
+        p.appendChild(kind)
+        const button = document.createElement('button')
+        button.innerText = 'My Tasks'
+        button.classList = 'task-btn'
+        button.setAttribute("id", this.id)
+        p.appendChild(button)
+        div.appendChild(p)
+    }
 
 }
