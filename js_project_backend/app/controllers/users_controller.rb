@@ -2,13 +2,14 @@ class UsersController < ApplicationController
 
     def index
         users = User.all 
-        render json: users 
+
+        render json: users, include: [:pets]
     end
 
     def show
         user = User.find_by(id: params[:id])
         if user
-            render json: { id: user.id, name: user.name, pets: user.pets}
+            render json: user, include: [:pets, :tasks]
         else
             render json: {message: 'User not found'}
         end
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
     private
     
     def user_params
-        params.require(:user).permit(:name)
+        params.require(:user).permit(:name, pet_attributes: [:id, :name, :kind, :user_id, tasks_attributes: %i[:id, :title, :comment, :time, :complete, :pet_id]])
     end
 end
 

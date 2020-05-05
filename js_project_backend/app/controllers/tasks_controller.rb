@@ -2,13 +2,13 @@ class TasksController < ApplicationController
 
     def index
         tasks = Task.all 
-        render json: tasks 
+        render json: tasks, only: [:id, :title, :comment, :time, :complete, :pet_id]
     end
 
     def show
         task = Task.find_by(id: params[:id])
         if task
-            render json: task
+            render json: task, only: [:id, :title, :comment, :time, :complete, :pet_id]
         else
             render json: {message: 'Task not found'}
         end

@@ -2,13 +2,13 @@ class PetsController < ApplicationController
 
     def index
         pets = Pet.all 
-        render json: pets
+        render json: pets, include: [:tasks]
     end
 
     def show
         pet = Pet.find_by(id: params[:id])
         if pet
-            render json: { id: pet.id, name: pet.name, kind: pet.kind, tasks: pet.tasks}
+            render json: pet, include: [:tasks]
         else
             render json: {message: 'Pet not found'}
         end
@@ -38,7 +38,7 @@ class PetsController < ApplicationController
     private
 
     def pet_params
-        params.require(:pet).permit(:name, :kind, :user_id)
+        params.require(:pet).permit(:name, :kind, :user_id, :tasks)
     end
     
 
