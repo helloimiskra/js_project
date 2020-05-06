@@ -8,25 +8,26 @@ class Task {
     }
 
 
-    static newTaskForm(pet_id){
+    static newTaskForm(e, pet_id){
+        const card = document.getElementById(pet_id)
+
         const tasksContainer = document.getElementById('tasks-container')
 
         const newTaskForm = `
         
         <form id = "new-task-form">
-        <label>Task Name</label>
-        <input type = "text" id = "title"><br>
-        <label>Comment:</label>
-        <input type = "text" id = "comment"><br>
+        <input type = "text" id = "title" placeholder = "Task:"><br>
+        <input type = "text" id = "comment" placeholder = "Comment:"><br>
         <input type = "submit"/> </form>
         `
 
-        tasksContainer.insertAdjacentHTML('beforeend', newTaskForm)
+        card.insertAdjacentHTML('beforeend', newTaskForm)
         Task.createTask(pet_id)
     }
 
     static createTask(pet_id){
         const taskForm = document.getElementById('new-task-form')
+      
         taskForm.addEventListener('submit', function(e){
             e.preventDefault()
             fetch('http://localhost:3000/tasks', {
@@ -38,8 +39,8 @@ class Task {
                 body: JSON.stringify(
                     {
                         task: {
-                            title: e.target.children[1].value,
-                            comment: e.target.children[4].value,
+                            title: e.target.children[0].value,
+                            comment: e.target.children[2].value,
                             complete: false,
                             time: new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}),
                             pet_id: pet_id
@@ -51,31 +52,31 @@ class Task {
                 })
                 .then (task => {
                     const newTask = new Task(task)
-                    newTask.displayTask()
+                    newTask.pet_id = pet_id
+                    newTask.displayTask(pet_id)
                 })
             })
         }
         
 
-        displayTask(){
-
-            const div = document.getElementById('tasks-container')
+        displayTask(pet_id){
+            const div = document.getElementById(pet_id)
             const t = document.createElement('div')
-            t.className = "card"
-            const title = document.createElement('h3')
-            title.innerText = `Title: ${this.title}`
-            t.appendChild(title)
-            const comment = document.createElement('h3')
-            comment.innerText = `Comment: ${this.comment}`
-            t.appendChild(comment)
-            const complete = document.createElement("input")
-            complete.setAttribute("type", "checkbox")
-            const button = document.createElement('button')
-            button.innerText = 'Delete Task'
-            button.classList = 'delete-btn'
-            button.setAttribute("id", this.id)
-            t.appendChild(button)
+            const content = document.createElement('h3')
+            content.innerText = `Title: ${this.title}  Comment: ${this.comment}`
+            t.appendChild(content)
+            const deleteButton = document.createElement('button')
+            deleteButton.innerText = 'X'
+            deleteButton.classList = 'delete-btn'
+            deleteButton.setAttribute("id", this.id)
+
+
+            t.insertAdjacentElement("afterend", deleteButton)
             div.appendChild(t)
+
+            deleteButton.addEventListener('click', (e) => {
+                Task.deleteTask(e, this.id)
+            })
         }
 
 }

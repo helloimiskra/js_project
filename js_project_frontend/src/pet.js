@@ -3,6 +3,7 @@ class Pet {
         this.id = pet.id
         this.name = pet.name
         this.kind = pet.kind
+        this.user_id = pet.user_id
         this.tasks = pet.tasks
     }
 
@@ -34,6 +35,7 @@ class Pet {
             button.setAttribute("id", pet.id)
             p.appendChild(button)
             div.appendChild(p)
+            
             }
         )
     }
@@ -43,10 +45,8 @@ class Pet {
         const newPetForm = `
         
         <form id = "new-pet-form">
-        <label>Pet Name</label>
-        <input type = "text" id = "name"><br>
-        <label>Pet Type (dog, cat, fish, etc)</label>
-        <input type = "text" id = "kind">
+        <input type = "text" id = "name" placeholder="Input your pet's name..."><br>
+        <input type = "text" id = "kind" placeholder = "Input your pet type(cat, dog, fish, etc.)"> <br>
         <input type = "submit"/> </form>
         `
 
@@ -67,8 +67,8 @@ class Pet {
                 body: JSON.stringify(
                     {
                         pet: {
-                            name: e.target.children[1].value,
-                            kind: e.target.children[4].value,
+                            name: e.target.children[0].value,
+                            kind: e.target.children[2].value,
                             user_id: user_id
                         }
                     })
@@ -78,7 +78,15 @@ class Pet {
                 })
                 .then (pet => {
                     const newPet = new Pet(pet)
+                    newPet.user_id = user_id
                     newPet.displayPet()
+                    if (newPet.tasks){
+                        newPet.tasks.forEach(function(task){
+                            let newTask = new Task(task)
+                            newTask.displayTask()
+                        })
+                    }
+
                 })
             })
         }
@@ -88,6 +96,7 @@ class Pet {
         const div = document.getElementById('pets-container')
         const p = document.createElement('div')
         p.className = "card"
+        p.setAttribute("id", this.id)
         const name = document.createElement('h3')
         name.innerText = `Name: ${this.name}`
         p.appendChild(name)
@@ -100,6 +109,24 @@ class Pet {
         button.setAttribute("id", this.id)
         p.appendChild(button)
         div.appendChild(p)
+
+        button.addEventListener('click', (e)=>{
+
+        Task.newTaskForm(e, this.id)
+        })
+        if (this.tasks){
+            this.tasks.forEach(function(task){
+                let newTask = new Task(task)
+                newTask.displayTask()
+            })
+        }
+
+        
+
+        
+        
+   
+        
     }
 
 }

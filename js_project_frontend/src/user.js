@@ -7,6 +7,7 @@ class User {
         this.id = user.id
         this.name = user.name
         this.pets = user.pets
+        this.tasks = user.tasks
     }
 
     static createUser(){
@@ -22,7 +23,7 @@ class User {
                 body: JSON.stringify(
                     {
                         user: {
-                            name: e.target.children[1].value
+                            name: e.target.children[0].value
                         }
                     })
                 })
@@ -50,6 +51,13 @@ class User {
                     newPet.displayPet()
                 })
             }
+            if (this.tasks){
+                this.tasks.forEach(function(task){
+                    let newTask = new Task(task)
+                    newTask.displayTask()
+                })
+            }
+            
             
         }
 
