@@ -81,12 +81,7 @@ class Pet {
                     const newPet = new Pet(pet)
                     newPet.user_id = user_id
                     newPet.displayPet()
-                    if (newPet.tasks){
-                        newPet.tasks.forEach(function(task){
-                            let newTask = new Task(task)
-                            newTask.displayTask()
-                        })
-                    }
+                    
 
                 })
             })
@@ -115,6 +110,7 @@ class Pet {
 
         Task.newTaskForm(e, this.id)
         })
+
         if (this.tasks){
             this.tasks.forEach(function(task){
                 let newTask = new Task(task)

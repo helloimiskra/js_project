@@ -44,13 +44,24 @@ class User {
             const petContainer = document.createElement('div')
             petContainer.setAttribute('id', 'pets-container')
             body.append(petContainer)
+            const taskContainer = document.createElement('div')
+            taskContainer.setAttribute('id', 'tasks-container')
+            petContainer.append(taskContainer)
             Pet.newPetForm(this.id)
+            const tasks = this.tasks
             if (this.pets){
                 this.pets.forEach(function(pet){
                     let newPet = new Pet(pet)
+                    newPet.tasks = []
+                    tasks.map((task)=>{
+                        if(task.pet_id === newPet.id){
+                            newPet.tasks.push(task)
+                        }
+                    })
                     newPet.displayPet()
                 })
             }
+            
             if (this.tasks){
                 this.tasks.forEach(function(task){
                     let newTask = new Task(task)
@@ -61,4 +72,6 @@ class User {
             
         }
 
+
+        
     }

@@ -23,6 +23,7 @@ class Task {
 
         card.insertAdjacentHTML('beforeend', newTaskForm)
         Task.createTask(pet_id)
+        console.log(pet_id)
     }
 
     static createTask(pet_id){
@@ -53,14 +54,17 @@ class Task {
                 .then (task => {
                     const newTask = new Task(task)
                     newTask.pet_id = pet_id
-                    newTask.displayTask(pet_id)
+                    console.log(pet_id)
+                    newTask.displayTask()
+                    console.log(pet_id)
                 })
             })
         }
         
 
-        displayTask(pet_id){
-            const div = document.getElementById(pet_id)
+        displayTask(){
+            const div = document.getElementById('tasks-container')
+       
             const t = document.createElement('div')
             const content = document.createElement('h3')
             content.innerText = `Title: ${this.title}       Comment: ${this.comment}`
@@ -80,7 +84,7 @@ class Task {
         }
 
         deleteTask(e, task_id){
-            fetch(`http://localhost:3000/tasks/${task_id}`, {
+            fetch(`http://localhost:3000/tasks/`+ task_id, {
             method: "DELETE"
             })
         }

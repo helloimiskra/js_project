@@ -12528,3 +12528,480 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms | Allocations: 9
 NoMethodError (undefined method `destroy' for nil:NilClass):
   
 app/controllers/tasks_controller.rb:38:in `destroy'
+Started GET "/users/1" for ::1 at 2020-05-06 10:06:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 4821)
+
+
+Started GET "/tasks" for ::1 at 2020-05-06 10:06:45 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 8412)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:10:48 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 10:10:48 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 4826)
+
+
+Started POST "/tasks" for ::1 at 2020-05-06 10:13:00 -0400
+Processing by TasksController#create as JSON
+  Parameters: {"task"=>{"title"=>"Hello", "comment"=>"Goodbye", "complete"=>false, "time"=>"10:13 AM", "pet_id"=>1}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."title" = ? LIMIT ?[0m  [["title", "Hello"], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:22:in `create'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:22:in `create'
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "comment", "time", "complete", "pet_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hello"], ["comment", "Goodbye"], ["time", "2020-05-06 10:13:00"], ["complete", 0], ["pet_id", 1], ["created_at", "2020-05-06 14:13:00.326947"], ["updated_at", "2020-05-06 14:13:00.326947"]]
+  ↳ app/controllers/tasks_controller.rb:22:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:22:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4004)
+
+
+Started DELETE "/tasks/51" for ::1 at 2020-05-06 10:14:40 -0400
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"51"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[36mTask Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 51]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 2357)
+
+
+Started POST "/pets" for ::1 at 2020-05-06 10:17:11 -0400
+Processing by PetsController#create as JSON
+  Parameters: {"pet"=>{"name"=>"Mishka", "kind"=>"Dog", "user_id"=>1, "tasks"=>[]}}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:18:in `create'
+[31mUnpermitted parameter: :tasks[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:22:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `create'
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("kind", "name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Dog"], ["name", "Mishka"], ["user_id", 1], ["created_at", "2020-05-06 14:17:11.470544"], ["updated_at", "2020-05-06 14:17:11.470544"]]
+  ↳ app/controllers/pets_controller.rb:22:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:22:in `create'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 4334)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:17:43 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 10:17:43 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:31:48 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1116)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 10:31:48 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 5025)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:33:03 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 10:33:03 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:34:07 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 10:34:07 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:46:58 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Iskra"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1116)
+
+
+Started GET "/users/5" for ::1 at 2020-05-06 10:46:58 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"5", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 3099)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:49:39 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Iskra"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/5" for ::1 at 2020-05-06 10:49:39 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"5", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 3048)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:50:04 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Iskra"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/5" for ::1 at 2020-05-06 10:50:04 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"5", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3048)
+
+
+Started DELETE "/tasks/49" for ::1 at 2020-05-06 10:50:13 -0400
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"49"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 49]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 2379)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:51:41 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Iskra"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/5" for ::1 at 2020-05-06 10:51:41 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"5", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2864)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:53:58 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Iskra"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Iskra"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/5" for ::1 at 2020-05-06 10:53:58 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"5", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2864)
+
+
+Started GET "/users/5" for ::1 at 2020-05-06 10:54:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 2860)
+
+
+Started POST "/users" for ::1 at 2020-05-06 10:55:14 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 10:55:14 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started GET "/users/2" for ::1 at 2020-05-06 11:04:14 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 6147)
+
+
+Started POST "/users" for ::1 at 2020-05-06 11:22:11 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1116)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 11:22:11 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 5025)
+
+
+Started GET "/pets/1" for ::1 at 2020-05-06 11:24:20 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:9:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."pet_id" = ?[0m  [["pet_id", 1]]
+  ↳ app/controllers/pets_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 3014)
+
+
+Started POST "/users" for ::1 at 2020-05-06 11:25:09 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 11:25:09 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started POST "/users" for ::1 at 2020-05-06 11:27:45 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 11:27:45 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started POST "/users" for ::1 at 2020-05-06 11:31:28 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Amelia"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amelia"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 1102)
+
+
+Started GET "/users/1" for ::1 at 2020-05-06 11:31:28 -0400
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "pets" ON "tasks"."pet_id" = "pets"."id" WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 4974)
+
+
+Started DELETE "/tasks/42" for ::1 at 2020-05-06 11:32:29 -0400
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"42"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[36mTask Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 2378)
+
+
