@@ -5,6 +5,7 @@ class Task {
         this.comment = task.comment
         this.time = task.time
         this.complete = task.complete
+        this.pet_id = task.pet_id
     }
 
 
@@ -63,7 +64,7 @@ class Task {
         
 
         displayTask(){
-            const div = document.getElementById('tasks-container')
+            const div = document.getElementById(this.pet_id)
        
             const t = document.createElement('div')
             const content = document.createElement('h3')
