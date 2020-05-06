@@ -34,6 +34,11 @@ class PetsController < ApplicationController
         redirect_to pet_path(pet)
     end
 
+    def destroy
+        pet = Pet.find_by(id: params[:id]).destroy
+        render json: pet
+    end
+
 
     private
 

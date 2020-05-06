@@ -68,8 +68,8 @@ class Pet {
                 body: JSON.stringify(
                     {
                         pet: {
-                            name: e.target.children[0].value,
-                            kind: e.target.children[2].value,
+                            name: e.target.children[1].value,
+                            kind: e.target.children[3].value,
                             user_id: user_id,
                             tasks: []
                         }
@@ -100,13 +100,26 @@ class Pet {
         const kind = document.createElement('h3')
         kind.innerText = `Kind: ${this.kind}`
         p.appendChild(kind)
+
+        const deleteButton = document.createElement('button')
+        deleteButton.innerHTML = 'Delete Pet'
+        deleteButton.classList = 'delete-btn'
+        deleteButton.setAttribute("id", this.id)
+        p.insertAdjacentElement('beforeend', deleteButton)
+
+        deleteButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            this.deletePet(e, this.id)
+            e.target.parentElement.remove()
+        })
+
+
         const button = document.createElement('button')
         button.innerText = 'My Tasks'
         button.classList = 'task-btn'
         button.setAttribute("id", `btn-${this.id}`)
         p.appendChild(button)
         div.appendChild(p)
-        
         button.addEventListener('click', (e)=>{
             if (!document.getElementById(`new-task-form-${this.id}`)){
                 Task.newTaskForm(e, this.id)
@@ -121,15 +134,12 @@ class Pet {
             }
             
         })
-
-        
-
-        
-
-        
-        
    
-        
+    }
+    deletePet(e, pet_id){
+        fetch(`http://localhost:3000/pets/`+ pet_id, {
+        method: "DELETE"
+        })
     }
 
 }
