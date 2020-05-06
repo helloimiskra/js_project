@@ -63,19 +63,25 @@ class Task {
             const div = document.getElementById(pet_id)
             const t = document.createElement('div')
             const content = document.createElement('h3')
-            content.innerText = `Title: ${this.title}  Comment: ${this.comment}`
+            content.innerText = `Title: ${this.title}       Comment: ${this.comment}`
             t.appendChild(content)
             const deleteButton = document.createElement('button')
             deleteButton.innerText = 'X'
             deleteButton.classList = 'delete-btn'
             deleteButton.setAttribute("id", this.id)
-
-
-            t.insertAdjacentElement("afterend", deleteButton)
+            t.insertAdjacentElement('beforeend', deleteButton)
             div.appendChild(t)
 
             deleteButton.addEventListener('click', (e) => {
-                Task.deleteTask(e, this.id)
+                e.preventDefault()
+                this.deleteTask(e, this.id)
+                e.target.parentElement.remove()
+            })
+        }
+
+        deleteTask(e, task_id){
+            fetch(`http://localhost:3000/tasks/${task_id}`, {
+            method: "DELETE"
             })
         }
 
