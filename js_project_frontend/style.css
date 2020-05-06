@@ -51,13 +51,12 @@ h4 {
 
 
 .card{
-
-  text-align: justify;
+  text-align: center;
   border: black solid 1px;
   padding: 1rem;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #234256;
-  display: flexbox;
+  display: inline-block;
 }
 .card-body {
   flex: 1 1 auto;
