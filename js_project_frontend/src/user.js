@@ -39,7 +39,7 @@ class User {
 
         displayUser() {
             const body = document.getElementById('index-container')
-            body.innerHTML = `<h1>Welcome back, ${this.name}.</h1>`
+            body.innerHTML = `<h2>Welcome back, ${this.name}.</h2>`
 
             const petContainer = document.createElement('div')
             petContainer.setAttribute('id', 'pets-container')

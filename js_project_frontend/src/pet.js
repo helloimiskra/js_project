@@ -69,7 +69,8 @@ class Pet {
                         pet: {
                             name: e.target.children[0].value,
                             kind: e.target.children[2].value,
-                            user_id: user_id
+                            user_id: user_id,
+                            tasks: []
                         }
                     })
                 })

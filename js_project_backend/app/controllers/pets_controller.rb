@@ -15,8 +15,8 @@ class PetsController < ApplicationController
     end
 
     def create
-        if Pet.find_by(user_id: pet_params[:user_id])
-            pet = Pet.find_by(user_id: pet_params[:user_id])
+        if Pet.find_by(id: params[:id])
+            pet = Pet.find_by(id: params[:id])
             redirect_to pet_path(pet)
         else
             pet = Pet.create(pet_params)
@@ -40,12 +40,6 @@ class PetsController < ApplicationController
     def pet_params
         params.require(:pet).permit(:name, :kind, :user_id, :tasks)
     end
-    
 
-    params.require(:pet).permit(
-        pet_attributes: [
-            :id, :name, :kind, :user_id, :tasks, :_destroy
-        ]
-    )
 
 end
