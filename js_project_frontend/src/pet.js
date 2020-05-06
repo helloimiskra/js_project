@@ -46,8 +46,8 @@ class Pet {
         
         <form id = "new-pet-form">
         <label><h4>Register a new pet:</h4></label>
-        <input type = "text" id = "name" placeholder="Input your pet's name..."><br>
-        <input type = "text" id = "kind" placeholder = "Input your pet type(cat, dog, fish, etc.)"> <br>
+        <input type = "text" id = "name" placeholder="Input your pet's name..." required ><br>
+        <input type = "text" id = "kind" placeholder = "Input your pet type(cat, dog, fish, etc.) required"> <br>
         <input type = "submit"/> </form>
         `
 

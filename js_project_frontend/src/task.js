@@ -17,8 +17,8 @@ class Task {
         const newTaskForm = `
         
         <form id = "new-task-form-${pet_id}" >
-        <input type = "text" id = "title" placeholder = "Task:"><br>
-        <input type = "text" id = "comment" placeholder = "Comment:"><br>
+        <input type = "text" id = "title" placeholder = "Task:" required><br>
+        <input type = "text" id = "comment" placeholder = "Comment:" required><br>
         <input type = "submit"/> </form>
         `
 
@@ -65,7 +65,7 @@ class Task {
         displayTask(){
             const div = document.getElementById(this.pet_id)
             const t = document.createElement('div')
-            const content = document.createElement('h3')
+            const content = document.createElement('h4')
             content.innerText = `Title: ${this.title}       Comment: ${this.comment}`
             t.appendChild(content)
             const deleteButton = document.createElement('button')

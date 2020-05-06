@@ -1,5 +1,6 @@
 class Pet < ApplicationRecord
-  validates_presence_of :name, :kind
+  validates :name, presence: true
+  validates :kind, presence: true
   belongs_to :user
   has_many :tasks, :dependent => :destroy
 end
