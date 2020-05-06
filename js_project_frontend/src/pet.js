@@ -45,6 +45,7 @@ class Pet {
         const newPetForm = `
         
         <form id = "new-pet-form">
+        <label><h4>Register a new pet:</h4></label>
         <input type = "text" id = "name" placeholder="Input your pet's name..."><br>
         <input type = "text" id = "kind" placeholder = "Input your pet type(cat, dog, fish, etc.)"> <br>
         <input type = "submit"/> </form>
@@ -102,21 +103,26 @@ class Pet {
         const button = document.createElement('button')
         button.innerText = 'My Tasks'
         button.classList = 'task-btn'
-        button.setAttribute("id", this.id)
+        button.setAttribute("id", `btn-${this.id}`)
         p.appendChild(button)
         div.appendChild(p)
-
+        
         button.addEventListener('click', (e)=>{
-
-        Task.newTaskForm(e, this.id)
+            if (!document.getElementById(`new-task-form-${this.id}`)){
+                Task.newTaskForm(e, this.id)
+                if (this.tasks){
+                    this.tasks.forEach(function(task){
+                        let newTask = new Task(task)
+                        newTask.displayTask()
+                    })
+                }
+            } else {
+                
+            }
+            
         })
 
-        if (this.tasks){
-            this.tasks.forEach(function(task){
-                let newTask = new Task(task)
-                newTask.displayTask()
-            })
-        }
+        
 
         
 

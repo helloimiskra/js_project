@@ -39,7 +39,9 @@ class User {
 
         displayUser() {
             const body = document.getElementById('index-container')
-            body.innerHTML = `<h2>Welcome back, ${this.name}.</h2>`
+            body.innerHTML = `
+            <h2>Welcome back, ${this.name}.</h2>
+            <h3>Manage your pets and record your tasks below.</h3>`
 
             const petContainer = document.createElement('div')
             petContainer.setAttribute('id', 'pets-container')
@@ -62,12 +64,6 @@ class User {
                 })
             }
             
-            if (this.tasks){
-                this.tasks.forEach(function(task){
-                    let newTask = new Task(task)
-                    newTask.displayTask()
-                })
-            }
             
             
         }

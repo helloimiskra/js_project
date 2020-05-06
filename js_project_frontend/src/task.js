@@ -16,7 +16,7 @@ class Task {
 
         const newTaskForm = `
         
-        <form id = "new-task-form">
+        <form id = "new-task-form-${pet_id}" >
         <input type = "text" id = "title" placeholder = "Task:"><br>
         <input type = "text" id = "comment" placeholder = "Comment:"><br>
         <input type = "submit"/> </form>
@@ -28,7 +28,7 @@ class Task {
     }
 
     static createTask(pet_id){
-        const taskForm = document.getElementById('new-task-form')
+        const taskForm = document.getElementById(`new-task-form-${pet_id}`)
       
         taskForm.addEventListener('submit', function(e){
             e.preventDefault()
@@ -55,9 +55,8 @@ class Task {
                 .then (task => {
                     const newTask = new Task(task)
                     newTask.pet_id = pet_id
-                    console.log(pet_id)
                     newTask.displayTask()
-                    console.log(pet_id)
+                  
                 })
             })
         }
@@ -65,7 +64,6 @@ class Task {
 
         displayTask(){
             const div = document.getElementById(this.pet_id)
-       
             const t = document.createElement('div')
             const content = document.createElement('h3')
             content.innerText = `Title: ${this.title}       Comment: ${this.comment}`
