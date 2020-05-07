@@ -9,6 +9,7 @@ First, fork and clone this repository.
 
 ## Run
 ```bash
+cd js_project_backend
 bundle install
 rails db:migrate
 ```
