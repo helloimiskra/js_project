@@ -48,6 +48,7 @@ class User {
             body.append(petContainer)
             const taskContainer = document.createElement('div')
             taskContainer.setAttribute('id', 'tasks-container')
+            
             petContainer.append(taskContainer)
             Pet.newPetForm(this.id)
             const tasks = this.tasks

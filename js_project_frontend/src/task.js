@@ -12,7 +12,7 @@ class Task {
     static newTaskForm(e, pet_id){
         const card = document.getElementById(pet_id)
 
-        const tasksContainer = document.getElementById('tasks-container')
+        const tasksContainer = document.getElementById(`${pet_id} - tasks-container`)
 
         const newTaskForm = `
         
@@ -22,7 +22,8 @@ class Task {
         <input type = "submit"/> </form>
         `
 
-        card.insertAdjacentHTML('beforeend', newTaskForm)
+        tasksContainer.insertAdjacentHTML('beforeend', newTaskForm)
+        card.appendChild(tasksContainer)
         Task.createTask(pet_id)
         console.log(pet_id)
     }
@@ -63,7 +64,7 @@ class Task {
         
 
         displayTask(){
-            const div = document.getElementById(this.pet_id)
+            const div = document.getElementById(`${this.pet_id} - tasks`)
             const t = document.createElement('div')
             const content = document.createElement('h4')
             content.innerText = `Title: ${this.title}       Comment: ${this.comment}`
@@ -88,5 +89,9 @@ class Task {
             })
         }
 
+
+        //go over pet tasks (access pet tasks) iterate over them, and display by alphabetical order
+        // a function, it will be called in the display tasks section
+        // make a button in the display tasks add event listener which upon click does the sorting function and displays task
 }
 

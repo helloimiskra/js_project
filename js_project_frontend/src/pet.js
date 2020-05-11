@@ -113,27 +113,58 @@ class Pet {
             e.target.parentElement.remove()
         })
 
+        const taskContainer = document.createElement('div')
+        taskContainer.setAttribute('id', `${this.id} - tasks-container`)
+        
 
         const button = document.createElement('button')
         button.innerText = 'My Tasks'
         button.classList = 'task-btn'
         button.setAttribute("id", `btn-${this.id}`)
-        p.appendChild(button)
-        div.appendChild(p)
+        taskContainer.appendChild(button)
+        let tasks = this.tasks
+
+        
+        
         button.addEventListener('click', (e)=>{
             if (!document.getElementById(`new-task-form-${this.id}`)){
                 Task.newTaskForm(e, this.id)
-                if (this.tasks){
-                    this.tasks.forEach(function(task){
+                let allTasks = document.createElement('div')
+                allTasks.setAttribute('id', `${this.id} - tasks`)
+                taskContainer.appendChild(allTasks)
+                const sortButton = document.createElement('button')
+                sortButton.innerText = 'Sort by Alphabetical Order'
+                sortButton.classList = 'sort-btn'
+                allTasks.appendChild(sortButton) 
+                sortButton.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    tasks.sort(function(a,b) {
+                        return a.title.localeCompare(b.title)
+                    })
+
+                    let clearedTasks = document.getElementById(`${this.id} - tasks`)
+                    clearedTasks.innerHTML = ''
+                    tasks.forEach(function(task){
                         let newTask = new Task(task)
                         newTask.displayTask()
                     })
-                }
-            } else {
+                    })
+                if (tasks){
+                    tasks.forEach(function(task){
+                        let newTask = new Task(task)
+                        newTask.displayTask()
+                    })
+                } 
+                    
                 
             }
+                
+             
+        }
             
-        })
+        )
+        p.appendChild(taskContainer)
+        div.appendChild(p)
    
     }
     deletePet(e, pet_id){
