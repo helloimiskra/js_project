@@ -1,7 +1,7 @@
 
-# Pet Task Diary Tracker
+# Pet Task Tracker
 
-Pet Task Diary Tracker is a Rails API with JavaScript-based frontend for recording and managing a pet's daily events and related tasks.
+Pet Task Tracker is a Rails API with JavaScript-based frontend for recording and managing a pet's daily events and related tasks.
 
 ## Installation
 
