@@ -9,9 +9,7 @@
 require 'faker'
 require 'securerandom'
 
-User.delete_all
-Pet.delete_all
-Task.delete_all
+
 
 users_name = [
     'Amelia',
