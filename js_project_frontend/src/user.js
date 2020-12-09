@@ -40,7 +40,7 @@ class User {
         const body = document.getElementById("index-container");
         body.innerHTML = `
             <h2>Welcome back, ${this.name}.</h2>
-            <h3>Manage your pets and record your tasks below.</h3>`;
+            <h3>Manage your pets and record your tasks below.</h3><br>`;
 
         const petContainer = document.createElement("div");
         petContainer.setAttribute("id", "pets-container");
