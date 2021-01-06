@@ -39,8 +39,10 @@ class User {
     displayUser() {
         const body = document.getElementById("index-container");
         body.innerHTML = `
-            <h2>Welcome back, ${this.name}.</h2>
-            <h3>Manage your pets and record your tasks below.</h3><br>`;
+            <h5 class ="display-5">Welcome back, ${this.name}.</h5>
+            <img src="./src/imgs/cat.png" alt="..." />
+            <hr>
+            <p>Manage your pets and record your tasks below.</p><br>`;
 
         const petContainer = document.createElement("div");
         petContainer.setAttribute("id", "pets-container");

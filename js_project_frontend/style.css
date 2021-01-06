@@ -60,6 +60,11 @@ h4 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .card {
     text-align: left;
     border: black solid 1px;
@@ -77,9 +82,10 @@ h4 {
 
 .card-text {
     font-size: 19px;
-    text-overflow: ellipsis;
+    display: inline-block;
+    text-overflow: auto;
     white-space: nowrap;
-    overflow: scroll;
+    overflow: auto;
 }
 
 input[type=text] {
