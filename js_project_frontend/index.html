@@ -1,90 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
 
-    <script src="./index.js"></script>
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Landing Page -->
 
     <title>Pet Task Tracker</title>
+    <script src="./index.js"></script>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <script
-    type="application/javascript"
-    src="src/user.js"
-    charset="UTF-8"
-  ></script>
-  <script
-    type="application/javascript"
-    src="src/pet.js"
-    charset="UTF-8"
-  ></script>
+</head>
 
-  <script
-    type="application/javascript"
-    src="src/task.js"
-    charset="UTF-8"
-  ></script>
-  <body>
-    <div class="card" id="index-container">
-      <div id="new-user-container">
-       
-          <div class="row g-0">
-            <div class="col-xl-6">
-              <div class="card-body">
-                <h5 class="display-5 card-title">Welcome to Pup-task-tic!</h5>
-                
-                <h6 class="display-6 card-text">
-                Pup-task-tic is a simple task tracker for your pets' needs.</h6>
-               
-                <p>To start, enter your name down below.</p>
-                <form id="new-user-form">
-                  <input
-                    type="text"
-                    placeholder="Input your name..."
-                    required
-                  /><br>
-                  <input type="submit" />
-                </form>
-              </div>
-              
-            </div>
-            <div class="col-xl-6">
-              <img src="./src/imgs/people-with-dogv.png" alt="..." />
-            </div>
-          </div>
-    
-        
-      </div>
+<!-- JavaScript Classes -->
+<script type="application/javascript" src="src/user.js" charset="UTF-8"></script>
+<script type="application/javascript" src="src/pet.js" charset="UTF-8"></script>
+<script type="application/javascript" src="src/task.js" charset="UTF-8"></script>
 
-      
-      <div id="pets-container" class="pets-container">
-        <div id="tasks-container" class="tasks-container"></div>
-      </div>
+<body>
+    <div class="container-fluid">
+        <div id="index-container">
+
+            <div class="landing row" id="new-user-container">
+
+                <div class="user-text col-lg-6 col-md-6">
+
+                    <h1 class="landing-title">Pup-Task-Tic</h1>
+                    <h3 class="landing-text">
+                        a simple task tracker for your pets' needs
+                    </h3>
+                    <hr />
+                    <p>To start, enter your name down below.</p>
+                    <form id="new-user-form">
+                        <input type="text" placeholder="Input your name..." required />
+                        <input class="submit-button btn btn-dark" type="submit" />
+                    </form>
+                </div>
+                <div class="user-image col-lg-6 col-md-6">
+                    <img src="./src/imgs/people-with-dog (5).png" alt="..." />
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="pets-container" class="pets-container">
+            <div id="tasks-container" class="tasks-container"></div>
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    </div>
+</body>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-  </body>
 </html>
