@@ -10,8 +10,11 @@ body {
   align-items: center;
   /* max-width: 1000px;
   margin: auto; */
-    background-color: #222831;
+    background-color: #dddddd;
     text-align: left;
+    background-position: center;
+    background-image: url("./src/imgs/background-028 (1).png");
+    background-size: auto;
 }
 
 
@@ -63,6 +66,7 @@ h3,
 h4,
 p {
     font-family: "Nanum Gothic";
+    margin: 0;
 }
 img {
     /* border-radius: 20%; */
@@ -127,6 +131,8 @@ textarea {
 }
 #index-container {
     width: max-content;
+    align-items: center;
+    padding: 10% 20%;
     /* height: 800px;
     width: 1000px; */
     /* align-content: center; */
@@ -148,16 +154,33 @@ textarea {
     /* align-content: center; */
     
     background-color: #dddddd;
-    border: #000000 1px;
-    border: black solid 2px;
+    border: #222831 1px;
+    border: #222831 solid 2px;
     padding: 1rem;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #f05454;
 }
-.container-fluid {
-    align-items: center;
-    padding: 10% 20%;
+.sidenav {
+    height: 400px;
+    width: 300px;
+    background-color: #222831;
+    /* border: #dddddd 1px;
+    border: #f05454 solid 2px; */
+    
+    box-shadow: 3px 4px #f05454;
 }
-#new-user-form {
-    padding-top: 10px;
+.login-image {
+    text-align: center;
+    width: 250px;
+    margin-top: 30px;
+}
+.login-main-text {
+    text-align: left;
+    color: #dddddd;
+    margin-left: 20px;
+}
+#new-pet-form {
+    text-align: left;
+    color: #dddddd;
+    margin-left: 20px;
 }

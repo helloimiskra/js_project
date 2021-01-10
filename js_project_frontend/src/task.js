@@ -20,7 +20,7 @@ class Task {
         <form id = "new-task-form-${pet_id}" >
         <input type = "text" id = "title" placeholder = "Task:" required><br>
         <input type = "text" id = "comment" placeholder = "Comment:" required><br>
-        <input type = "submit"/> </form>
+        <input class = "btn btn-dark" type = "submit"/> </form>
         `;
 
         tasksContainer.insertAdjacentHTML("beforeend", newTaskForm);
@@ -72,7 +72,7 @@ class Task {
         t.appendChild(content);
         const deleteButton = document.createElement("button");
         deleteButton.innerText = "X";
-        deleteButton.classList = "delete-btn";
+        deleteButton.classList = "delete-btn btn btn-dark";
         deleteButton.setAttribute("id", this.id);
         t.insertAdjacentElement("beforeend", deleteButton);
         div.appendChild(t);

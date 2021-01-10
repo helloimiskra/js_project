@@ -37,12 +37,20 @@ class User {
     }
 
     displayUser() {
-        const body = document.getElementById("index-container");
+        const body = document.getElementById("container-fluid");
         body.innerHTML = `
-            <h5 class ="display-5">Welcome back, ${this.name}.</h5>
-            <img src="./src/imgs/cat.png" alt="..." />
-            <hr>
-            <p>Manage your pets and record your tasks below.</p><br>`;
+        <div class="sidenav">
+        <img class = "login-image" src="./src/imgs/cat (1).png" alt="..." />
+        <div class="login-main-text">
+        <h3>Welcome, ${this.name}.</h3>
+        <br>
+        <hr>
+           <p>Add a pet down below.</p>
+        </div>
+     </div>
+            
+           
+        `;
 
         const petContainer = document.createElement("div");
         petContainer.setAttribute("id", "pets-container");

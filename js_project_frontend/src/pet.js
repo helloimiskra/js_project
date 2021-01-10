@@ -41,12 +41,13 @@ class Pet {
         const petsContainer = document.getElementById("pets-container");
 
         const newPetForm = `
-        
+        <div class="sidenav">
         <form id = "new-pet-form">
         <label><h4>Register a new pet:</h4></label><br>
         <input type = "text" id = "name" placeholder="Input your pet's name..." required ><br>
         <input type = "text" id = "kind" placeholder = "Input your pet type(cat, dog, fish, etc.) required"> <br>
-        <input type = "submit"/> </form>
+        <input type = "submit" class = "btn btn-light"/> </form>
+        </div>
         `;
 
         petsContainer.insertAdjacentHTML("beforeend", newPetForm);
@@ -65,10 +66,10 @@ class Pet {
                     },
                     body: JSON.stringify({
                         pet: {
-                            name: e.target.children[1].value,
-                            kind: e.target.children[3].value,
+                            name: e.target.children[2].value,
+                            kind: e.target.children[4].value,
                             user_id: user_id,
-                            tasks: [],
+                            tasks: []
                         },
                     }),
                 })
@@ -97,7 +98,7 @@ class Pet {
 
         const deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete Pet";
-        deleteButton.classList = "delete-btn";
+        deleteButton.classList = "delete-btn btn btn-dark";
         deleteButton.setAttribute("id", this.id);
         p.insertAdjacentElement("beforeend", deleteButton);
 
@@ -112,7 +113,7 @@ class Pet {
 
         const button = document.createElement("button");
         button.innerText = "My Tasks";
-        button.classList = "task-btn";
+        button.classList = "task-btn btn btn-dark";
         button.setAttribute("id", `btn-${this.id}`);
         taskContainer.appendChild(button);
         let tasks = this.tasks;
@@ -125,7 +126,7 @@ class Pet {
                 taskContainer.appendChild(allTasks);
                 const sortButton = document.createElement("button");
                 sortButton.innerText = "Sort by Alphabetical Order";
-                sortButton.classList = "sort-btn";
+                sortButton.classList = "sort-btn btn btn-dark";
                 allTasks.appendChild(sortButton);
                 sortButton.addEventListener("click", (e) => {
                     e.preventDefault();
